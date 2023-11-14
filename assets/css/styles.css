@@ -23,7 +23,8 @@ body {
   color-scheme: dark;
   background-image: url('../images/harry-potter.jpg');
   background-size: cover;
-  color: #92dbfc;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Components */
@@ -38,6 +39,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     align-content: center;
+    text-align: center;
   }
 }
 @media (min-width: 768px) {
