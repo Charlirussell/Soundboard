@@ -1,0 +1,82 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/*
+  Theme
+*/
+
+html {
+  font: 1.25em/1.75 system-ui, sans-serif;
+  height: 100%;
+}
+
+body {
+  color-scheme: dark;
+  background-image: url('../images/harry-potter.jpg');
+  background-size: cover;
+  color: #92dbfc;
+}
+
+/* Components */
+
+.pads {
+  height: 100%;
+  display: grid;
+}
+@media (max-width: 767.98px) {
+  .pads {
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .pads {
+    max-width: 44rem;
+    padding: 3vw;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    align-content: center;
+  }
+}
+
+.pads > div {
+  border: .2rem solid #2b3b51;
+  color: #1c2e2f;
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 1); 
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  aspect-ratio: 1;
+  font-weight: 600;
+  user-select: none;
+  
+}
+
+.pads > div:hover {
+  color:  #45b1f8;
+  text-shadow: 3px 3px 5px rgb(15, 10, 32); 
+  border-color: #C0C0C0;
+}
+
+.pads > div:active {
+  border-color: transparent;
+  background-color: #9ddbeb;
+  color: #1c2e2f;
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 1);
+  box-shadow: 0 0 2rem 0px #92dbfc;
+}
+
